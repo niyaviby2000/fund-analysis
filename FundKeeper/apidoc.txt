@@ -1,0 +1,86 @@
+#Authetication
+
+schema:User
+attributes:["username","email","password"]
+
+1)api for registering/creating an account for user
+
+    url: http://127.0.0.1:8000/api/register/
+
+    method:POST
+
+    body:{
+
+            username
+
+            email
+
+            password
+
+        }
+
+=============================================================================================================================================================================================================================================================================
+
+schema:Income
+attributes:["id","title","amount","category","created_date"]
+
+1)api for listing all Income
+
+    url:http://127.0.0.1:8000/api/income/
+
+    method:get
+
+    body:nil
+
+    authorization:{username,password}=>Basic Authetication,token snd instead of username,password,jwt(a token is snd)
+
+
+2) api for adding a new income
+
+    url:http://127.0.0.1:8000/api/income/
+
+    method:POST
+
+    body:{
+        "title",
+        "amount",
+        "category",
+        "created_date"
+    }
+
+    authorization:Basic Authetication
+
+3)api for specific detail
+
+    url:http://127.0.0.1:8000/api/income/{id}/
+
+    method:get
+
+    body:nil
+
+    authorization:Basic Authetication
+
+4)api for updating an expense
+
+     url:http://127.0.0.1:8000/api/income/{id}/
+
+    method:put
+
+    body:{
+        "title",
+        "amount",
+        "category",
+        "created_date"
+    }
+
+    authorization:Basic Authetication
+
+5) api for deleting an expense
+
+    url:http://127.0.0.1:8000/api/income/{id}/
+
+    method:delete
+
+    body:nil
+
+    authorization:Basic Authetication
